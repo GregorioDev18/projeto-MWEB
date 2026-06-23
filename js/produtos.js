@@ -7,11 +7,7 @@ const produtos = [
         descricao: "Camiseta minimalista em algodão premium com acabamento impecável. Confortável para o dia a dia e versátil para qualquer ocasião.",
         imagemPrincipal: "images/camisetaBranca.png",
         cores: [
-            { nome: "Branco", cor: "#ffffff", imagem: "images/camisetaBranca.png" },
-            { nome: "Preto", cor: "#000000", imagem: "images/camisetaPreta.png" },
-            { nome: "Azul", cor: "#1e3a8a", imagem: "images/camisetaAzul.png" },
-            { nome: "Vermelho", cor: "#dc2626", imagem: "images/camisetaVermelha.png" },
-            { nome: "Verde", cor: "#16a34a", imagem: "images/camisetaVerde.png" }
+            { nome: "Branco", cor: "#ffffff", imagem: "images/camisetaBranca.png" }
         ]
     },
     {
@@ -19,11 +15,14 @@ const produtos = [
         nome: "JKR Essential Cropped",
         preco: "R$ 49,90",
         descricao: "Cropped minimalista com caimento moderno e conforto garantido. Perfeito para looks descontraídos.",
-        imagemPrincipal: "images/croppedAzul.png",
+        imagemPrincipal: "images/croppedAmarelo.png",
         cores: [
+            { nome: "Amarelo", cor: "#FED302", imagem: "images/croppedAmarelo.png" },
             { nome: "Azul", cor: "#1e3a8a", imagem: "images/croppedAzul.png" },
-            { nome: "Preto", cor: "#000000", imagem: "images/croppedPreta.png" },
-            { nome: "Branco", cor: "#ffffff", imagem: "images/croppedBranco.png" }
+            { nome: "Branco", cor: "#ffffff", imagem: "images/croppedBranco.png" },
+            { nome: "Lilás", cor: "#BFA6D8", imagem: "images/croppedLilas.png" },
+            { nome: "Marrom", cor: "#895B4C", imagem: "images/croppedMarrom.png" },
+            { nome: "Preto", cor: "#000000", imagem: "images/croppedPreto.png" }
         ]
     },
     {
@@ -33,9 +32,7 @@ const produtos = [
         descricao: "Manga longa confortável para todas as ocasiões. Ideal para dias mais frios com estilo.",
         imagemPrincipal: "images/camisetaMangaBranca.png",
         cores: [
-            { nome: "Branco", cor: "#ffffff", imagem: "images/camisetaMangaBranca.png" },
-            { nome: "Preto", cor: "#000000", imagem: "images/camisetaMangaPreta.png" },
-            { nome: "Azul", cor: "#1e3a8a", imagem: "images/camisetaMangaAzul.png" }
+            { nome: "Branco", cor: "#ffffff", imagem: "images/camisetaMangaBranca.png" }
         ]
     },
     {
@@ -45,8 +42,9 @@ const produtos = [
         descricao: "Cropped exclusivo da coleção Brasil com estilo único e personalidade.",
         imagemPrincipal: "images/croppedAmareloBR.png",
         cores: [
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/croppedAmareloBR.png" },
-            { nome: "Verde", cor: "#16a34a", imagem: "images/croppedVerdeBR.png" }
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/croppedAmareloBR.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/croppedAzulBR.png" },
+            { nome: "Verde", cor: "#007036", imagem: "images/croppedVerdeBR.jpeg" }
         ]
     },
     {
@@ -56,19 +54,22 @@ const produtos = [
         descricao: "Estilo e torcida em uma só peça. Celebre o Brasil com atitude.",
         imagemPrincipal: "images/croppedAmareloBR2.png",
         cores: [
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/croppedAmareloBR2.png" },
-            { nome: "Verde", cor: "#16a34a", imagem: "images/croppedVerdeBR2.png" }
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/croppedAmareloBR2.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/croppedAzulBR2.png" },
+            { nome: "Verde", cor: "#077038", imagem: "images/croppedVerdeBR2.png" }
         ]
     },
     {
         id: 6,
         nome: "JKR Hexa Cropped",
         preco: "R$ 89,90",
-        descricao: "Cropped exclusivo da coleção Brasil. Conforto e patriotismo combinados.",
+        descricao: "Cropped exclusivo da coleção Brasil. Conforto e patriotismo combinados em duas estampas.",
         imagemPrincipal: "images/croppedCopa4.png",
         cores: [
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/croppedCopa4.png" },
-            { nome: "Verde", cor: "#16a34a", imagem: "images/croppedCopaVerde.png" }
+            { nome: "Amarelo Taça", cor: "#E5AA06", imagem: "images/croppedCopa4.png" },
+            { nome: "Azul CBF", cor: "#023990", imagem: "images/croppedCopa.png" },
+            { nome: "Verde Taça", cor: "#095237", imagem: "images/croppedCopa3.png" },
+            { nome: "Verde CBF", cor: "#095237", imagem: "images/croppedCopa2.png" }
         ]
     },
     {
@@ -76,10 +77,11 @@ const produtos = [
         nome: "JKR Brasil",
         preco: "R$ 59,90",
         descricao: "Regata inspirada nas cores da bandeira. Leve e confortável para o calor.",
-        imagemPrincipal: "images/regatinhaVerdeBR.png",
+        imagemPrincipal: "images/regatinhaBR.png",
         cores: [
-            { nome: "Verde", cor: "#16a34a", imagem: "images/regatinhaVerdeBR.png" },
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/regatinhaAmarelaBR.png" }
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/regatinhaBR.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/regatinhaAzulBR.png" },
+            { nome: "Verde", cor: "#077038", imagem: "images/regatinhaVerdeBR.png" }
         ]
     },
     {
@@ -87,10 +89,11 @@ const produtos = [
         nome: "JKR Brasil",
         preco: "R$ 109,90",
         descricao: "Estilo esportivo para torcer com personalidade. Camiseta inspirada em ícones do futebol.",
-        imagemPrincipal: "images/camisaCopa2.png",
+        imagemPrincipal: "images/camisaCopa.png",
         cores: [
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/camisaCopa2.png" },
-            { nome: "Verde", cor: "#16a34a", imagem: "images/camisaCopaVerde.png" }
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/camisaCopa.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/camisaCopa2.png" },
+            { nome: "Verde", cor: "#077038", imagem: "images/camisaCopa3.png" }
         ]
     },
     {
@@ -101,7 +104,7 @@ const produtos = [
         imagemPrincipal: "images/camisetaVerdeBR.png",
         cores: [
             { nome: "Verde", cor: "#16a34a", imagem: "images/camisetaVerdeBR.png" },
-            { nome: "Amarelo", cor: "#fbbf24", imagem: "images/camisetaAmarelaBR.png" }
+            { nome: "Azul", cor: "#023990", imagem: "images/camisetaCopaAzulBR.png" }
         ]
     },
     {
@@ -112,7 +115,7 @@ const produtos = [
         imagemPrincipal: "images/croppedLuaSolPreta.png",
         cores: [
             { nome: "Preto", cor: "#000000", imagem: "images/croppedLuaSolPreta.png" },
-            { nome: "Cinza", cor: "#6b7280", imagem: "images/croppedLuaSolCinza.png" }
+            { nome: "Lilás", cor: "#BFA6D8", imagem: "images/croppedLuaSolLilas.png" }
         ]
     },
     {
@@ -123,7 +126,7 @@ const produtos = [
         imagemPrincipal: "images/croppedStreetwear.png",
         cores: [
             { nome: "Preto", cor: "#000000", imagem: "images/croppedStreetwear.png" },
-            { nome: "Branco", cor: "#ffffff", imagem: "images/croppedStreetwearBranco.png" }
+            { nome: "Grafite", cor: "#0b0b0b", imagem: "images/Streetwear.png" }
         ]
     },
     {
@@ -134,7 +137,9 @@ const produtos = [
         imagemPrincipal: "images/regatinhaPraianaPreta.png",
         cores: [
             { nome: "Preto", cor: "#000000", imagem: "images/regatinhaPraianaPreta.png" },
-            { nome: "Cinza", cor: "#6b7280", imagem: "images/regatinhaPraianaCinza.png" }
+            { nome: "Azul", cor: "#1e3a8a", imagem: "images/regataPraianaAzul.png" },
+            { nome: "Lilás", cor: "#BFA6D8", imagem: "images/regataPraianaLilas.png" },
+            { nome: "Marrom", cor: "#895B4C", imagem: "images/regataPraianaMarrom.png" },
         ]
     },
     {
@@ -144,8 +149,8 @@ const produtos = [
         descricao: "Camiseta streetwear com visual sofisticado. Estampa exclusiva e minimalista.",
         imagemPrincipal: "images/Streetwear4.png",
         cores: [
-            { nome: "Preto", cor: "#000000", imagem: "images/Streetwear4.png" },
-            { nome: "Branco", cor: "#ffffff", imagem: "images/Streetwear4Branco.png" }
+            { nome: "Branca", cor: "#ffffff", imagem: "images/Streetwear4.png" },
+            { nome: "Cinza", cor: "#A5A4A9", imagem: "images/Streetwear5.png" }
         ]
     },
     {
@@ -155,8 +160,19 @@ const produtos = [
         descricao: "Estampa exclusiva inspirada na vida selvagem. Para quem tem coragem de se destacar.",
         imagemPrincipal: "images/camisaUrbanUrso.png",
         cores: [
-            { nome: "Preto", cor: "#000000", imagem: "images/camisaUrbanUrso.png" },
-            { nome: "Cinza", cor: "#6b7280", imagem: "images/camisaUrbanUrsoCinza.png" }
+            { nome: "Azul Petroleo 1", cor: "#1E3253", imagem: "images/camisaUrbanUrso.png" },
+            { nome: "Azul Petroleo 2", cor: "#1E3253", imagem: "images/camisaUrso.png" }
+        ]
+    },
+    {
+        id: 15,
+        nome: "JKR Emblem Tee",
+        preco: "R$ 99,90",
+        descricao: "Camiseta streetwear com visual sofisticado.",
+        imagemPrincipal: "images/Streetwear2.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/Streetwear2.png" },
+            { nome: "Grafite", cor: "#0b0b0b", imagem: "images/Streetwear3.png" }
         ]
     }
 ];
