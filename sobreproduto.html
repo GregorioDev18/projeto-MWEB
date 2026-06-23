@@ -3,157 +3,90 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JKR Basic Cropped</title>
-
+    <title>Detalhes do Produto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="container py-5">
+    <header class="bg-dark text-white text-center p-3">
+        <h1>Produtos JKR</h1>
+    </header>
+
+    <main class="container py-5">
 
         <div class="row">
 
+            <!-- IMAGEM E CORES -->
             <div class="col-md-6">
-                <img id="imagemProduto" src="images/croppedAzul.png" class="img-fluid rounded" alt="JKR Basic Cropped">
+                <img id="imagemPrincipal" src="images/camisetaBranca.png" class="imagem-principal" alt="Produto">
+
+                <!-- CORES -->
+                <div>
+                    <h5 class="mb-3">Cores Disponíveis:</h5>
+                    <div class="cores-container">
+                        <!-- As cores serão carregadas dinamicamente aqui -->
+                    </div>
+                </div>
             </div>
 
+            <!-- INFORMAÇÕES E COMPRA -->
             <div class="col-md-6">
+                <h2 id="nomeProduto">JKR Essential Tee</h2>
 
-                <h2>JKR Basic Cropped</h2>
-
-                <h3 class="mb-3">R$ 49,90</h3>
-
-                <p>
-                    Cropped minimalista confeccionado em algodão premium.
-                    Confortável para o dia a dia.
+                <p id="descricaoProduto" class="text-muted mt-3">
+                    Camiseta minimalista em algodão premium com acabamento impecável. Confortável para o dia a dia e
+                    versátil para qualquer ocasião.
                 </p>
 
-                <h5>Cor</h5>
+                <div class="preco" id="precoProduto">R$ 89,90</div>
 
-                <div class="d-flex gap-2 mb-4">
-
-                    <button class="btn btn-warning" onclick="trocarCor('amarelo')">
-                        Amarelo
-                    </button>
-
-                    <button class="btn btn-primary" onclick="trocarCor('azul')">
-                        Azul
-                    </button>
-
-                    <button class="btn btn-light border" onclick="trocarCor('branco')">
-                        Branco
-                    </button>
-
-                    <button class="btn btn-secondary" onclick="trocarCor('lilas')">
-                        Lilás
-                    </button>
-
-                    <button class="btn btn-dark" onclick="trocarCor('marrom')">
-                        Marrom
-                    </button>
-
-                    <button class="btn btn-dark" onclick="trocarCor('preto')">
-                        Preto
-                    </button>
-
-                    <button class="btn btn-dark" onclick="trocarCor('rosa')">
-                        Rosa
-                    </button>
-
+                <!-- TAMANHOS -->
+                <div class="mb-4">
+                    <h5 class="mb-3">Tamanho:</h5>
+                    <div class="tamanhos-container">
+                        <button class="tamanho-btn ativo" onclick="selecionarTamanho(this)">P</button>
+                        <button class="tamanho-btn" onclick="selecionarTamanho(this)">M</button>
+                        <button class="tamanho-btn" onclick="selecionarTamanho(this)">G</button>
+                        <button class="tamanho-btn" onclick="selecionarTamanho(this)">GG</button>
+                    </div>
                 </div>
 
-                <h5>Tamanho</h5>
-
-                <div class="d-flex gap-2 mb-4">
-
-                    <button class="btn btn-outline-dark tamanho-btn" onclick="selecionarTamanho(this)">
-                        PP
+                <!-- BOTÕES DE COMPRA -->
+                <div class="botoes-compra">
+                    <button class="btn-compra btn-carrinho" onclick="adicionarCarrinho()">
+                        🛒 Adicionar ao Carrinho
                     </button>
-
-                    <button class="btn btn-outline-dark tamanho-btn" onclick="selecionarTamanho(this)">
-                        P
+                    <button class="btn-compra btn-comprar" onclick="comprarAgora()">
+                        ⚡ Comprar Agora
                     </button>
-
-                    <button class="btn btn-outline-dark tamanho-btn" onclick="selecionarTamanho(this)">
-                        M
-                    </button>
-
-                    <button class="btn btn-outline-dark tamanho-btn" onclick="selecionarTamanho(this)">
-                        G
-                    </button>
-
-                    <button class="btn btn-outline-dark tamanho-btn" onclick="selecionarTamanho(this)">
-                        GG
-                    </button>
-
                 </div>
 
-                <button class="btn btn-dark w-100 mb-2">
-                    Adicionar ao Carrinho
-                </button>
+                <!-- INFORMAÇÕES ADICIONAIS -->
+                <div class="info-produto">
+                    <h6>Detalhes do Produto:</h6>
+                    <ul class="mb-0">
+                        <li>100% Algodão Premium</li>
+                        <li>Lavagem em água fria recomendada</li>
+                        <li>Frete grátis acima de R$ 150</li>
+                        <li>Troca gratuita em até 30 dias</li>
+                    </ul>
+                </div>
 
-                <button class="btn btn-success w-100">
-                    Comprar Agora
-                </button>
-
+                <a href="produtos.html" class="btn btn-outline-dark mt-4 w-100">← Voltar aos Produtos</a>
             </div>
 
         </div>
 
-    </div>
+    </main>
 
-    <script>
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 JKR
+    </footer>
 
-        function trocarCor(cor) {
-
-            const imagem = document.getElementById("imagemProduto");
-
-            if (cor === "azul") {
-                imagem.src = "images/croppedAzul.png";
-            }
-
-            else if (cor === "lilas") {
-                imagem.src = "images/croppedLilas.png";
-            }
-
-            else if (cor === "amarelo") {
-                imagem.src = "images/croppedAmarelo.png";
-            }
-
-            else if (cor === "branco") {
-                imagem.src = "images/croppedBranco.png";
-            }
-
-            else if (cor === "marrom") {
-                imagem.src = "images/croppedMarrom.png";
-            }
-
-            else if (cor === "preto") {
-                imagem.src = "images/croppedPreto.png";
-            }
-            else if (cor === "rosa") {
-                imagem.src = "images/croppedRosa.png";
-            }
-
-        }
-
-        function selecionarTamanho(botao) {
-
-            const botoes = document.querySelectorAll(".tamanho-btn");
-
-            botoes.forEach(btn => {
-                btn.classList.remove("btn-dark");
-                btn.classList.add("btn-outline-dark");
-            });
-
-            botao.classList.remove("btn-outline-dark");
-            botao.classList.add("btn-dark");
-
-        }
-
-    </script>
+    <script src="js/produtos.js"></script>
+    <script src="js/sobreproduto.js"></script>
 
 </body>
 

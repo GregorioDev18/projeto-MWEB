@@ -20,7 +20,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 main {
@@ -29,4 +29,119 @@ main {
 
 footer {
   margin-top: 40px;
+}
+
+/* ===== PÁGINA DE DETALHES DO PRODUTO ===== */
+
+.imagem-principal {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+}
+
+.cores-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.cor-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.cor-btn:hover {
+  transform: scale(1.1);
+}
+
+.cor-btn.ativo {
+  border-color: #000 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tamanhos-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tamanho-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tamanho-btn:hover {
+  border-color: #000;
+}
+
+.tamanho-btn.ativo {
+  background: #000;
+  color: white;
+  border-color: #000;
+}
+
+.preco {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #000;
+}
+
+.botoes-compra {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.btn-compra {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn-carrinho {
+  background: white;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-carrinho:hover {
+  background: #f0f0f0;
+}
+
+.btn-comprar {
+  background: #000;
+  color: white;
+}
+
+.btn-comprar:hover {
+  background: #333;
+}
+
+.info-produto {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
 }
