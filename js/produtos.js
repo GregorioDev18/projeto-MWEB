@@ -195,7 +195,7 @@ const produtos = [
         cores: [
             { nome: "Preto", cor: "#000000", imagem: "images/regataMasculinaPreta.png" },
             { nome: "Azul", cor: "#1e3a8a", imagem: "images/regataMasculinaAzul.png" },
-            {  nome: "Branco", cor: "#ffffff", imagem: "images/regataMasculinaBranca.png" }
+            { nome: "Branco", cor: "#ffffff", imagem: "images/regataMasculinaBranca.png" }
         ]
     },
     {
@@ -208,12 +208,12 @@ const produtos = [
             { nome: "Verde", cor: "#077038", imagem: "images/babylookCopa.png.png" },
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/babylookCopa2.png" },
             { nome: "Amarelo", cor: "#023990", imagem: "images/babylookCopa3.png" }
-            
+
         ]
     },
     {
         id: 19,
-        nome: "JJKR Hexa Tank",
+        nome: "JKR Hexa Tank",
         preco: "R$ 99,90",
         descricao: "Regata do Brasil para você acompahar a copa",
         imagemPrincipal: "images/regataMasculinaCopa2.png",
@@ -222,5 +222,61 @@ const produtos = [
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/regataMaculinaCopa.png" },
             { nome: "Amarelo", cor: "#023990", imagem: "images/regataMaculinaCopa3.png" }
         ]
-    }
+    },
+    {
+        id: 20,
+        nome: "JKR Emblem Tee",
+        preco: "R$ 99,90",
+        descricao: "Camiseta streetwear com visual sofisticado.",
+        imagemPrincipal: "images/camisetaCinza.png",
+        cores: [
+            { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaCinza.png" }]
+    },
+    {
+        id: 21,
+        nome: "JKR Essential Tee",
+        preco: "R$ 79,90",
+        descricao: "Camiseta sofisticada e minimalista",
+        imagemPrincipal: "images/camisetaMinimalistaPreta.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/camisetaMinimalistaPreta.png" },
+            { nome: "Branco", cor: "#ffffff", imagem: "images/camisetaMinimalistaBranca.png" },
+            { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaMinimalistaCinza.png" }
+        ]
+    },
+    {
+        id: 22,
+        nome: "JKR Essential Baby",
+        preco: "R$ 79,90",
+        descricao: "Baby Look sofisticada e minimalista",
+        imagemPrincipal: "images/babylookBorboletaPreta.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/babylookBorboletaPreta.png" },
+            { nome: "Branco", cor: "#ffffff", imagem: "images/babylookBorboletaBranca.png" },
+            { nome: "Lilás", cor: "#BFA6D8", imagem: "images/babylookBorboletaLilas.png" }
+        ]
+    },
+    {
+        id: 23,
+        nome: "JKR Essential Baby",
+        preco: "R$ 79,90",
+        descricao: "Baby Look sofisticada e minimalista",
+        imagemPrincipal: "images/babylookPretaMinimalista.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/babylookPretaMinimalista.png" },
+            { nome: "Branco", cor: "#ffffff", imagem: "images/babylookBrancaMinimalista.png" }
+        ]
+    },
+    {
+        id: 24,
+        nome: "JKR Essential RGB",
+        preco: "R$ 79,90",
+        descricao: "Seu estilo na melhor marca",
+        imagemPrincipal: "images/camisetaRGBPreta.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/camisetaRGBPreta.png" },
+            { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaRGBCinza.png" }
+        ]
+    },
+    
 ];
