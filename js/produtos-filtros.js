@@ -61,6 +61,22 @@ const dadosProdutos = [
         nome: "JKR Emblem Tee", 
         descricao: "Camiseta streetwear com visual sofisticado", 
         categorias: ["masculino", "camiseta", "streetwear"] },
+    { id: 16, 
+        nome: "JKR Essential Baby Tee", 
+        descricao: "Baby look minimalista em algodão premium", 
+        categorias: ["feminino", "babylook"] },
+    { id: 17, 
+        nome: "JKR Urban Sleeveless", 
+        descricao: "Regata masculina com visual moderno", 
+        categorias: ["masculino", "regata"] },
+    { id: 18, 
+        nome: "JKR Hexa Baby", 
+        descricao: "JBaby look inspirada na paixão pelo Brasil", 
+        categorias: ["feminino", "babylook", "copa 2026"] },
+    { id: 19, 
+        nome: "JJKR Hexa Tank", 
+        descricao: "Regata do Brasil para você acompahar a copa.", 
+        categorias: ["masculino", "regata", "copa 2026"] },
 ];
 
 let categoriaAtiva = null;
