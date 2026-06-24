@@ -32,7 +32,7 @@ footer {
 }
 
 .bg-marrom {
-  background-color: #69503c !important; /
+  background-color: #69503c !important;/
 }
 
 /* ===== PÁGINA DE DETALHES DO PRODUTO ===== */
@@ -148,4 +148,95 @@ footer {
   padding: 20px;
   background: #f9f9f9;
   border-radius: 8px;
+}
+
+/* faixa de apresentação abaixo da navbar */
+.sobre-banner {
+  background-color: #4a3728;
+  color: white;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.sobre-banner h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sobre-banner p {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* cards das seções história, missão e visão */
+.card-secao {
+  border: none;
+  border-left: 4px solid #69503c;
+  border-radius: 8px;
+  background: #faf9f7;
+  padding: 28px 32px;
+  height: 100%;
+}
+
+.card-secao h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #69503c;
+  margin-bottom: 12px;
+}
+
+.card-secao p {
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* título da seção de valores */
+.valores-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c2c2a;
+  margin-bottom: 20px;
+}
+
+/* cada valor como card com ícone */
+.valor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.valor-icone {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #69503c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.valor-texto strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c2c2a;
+  margin-bottom: 4px;
+}
+
+.valor-texto span {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.5;
 }

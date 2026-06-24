@@ -63,15 +63,12 @@ const dadosProdutos = [
         categorias: ["masculino", "camiseta", "streetwear"] },
 ];
 
-// guarda qual categoria está ativa no momento (null = todas)
 let categoriaAtiva = null;
 
-// pega o texto de busca atual do campo
 function getTextoBusca() {
     return document.querySelector(".form-control").value.toLowerCase().trim();
 }
 
-// decide se um produto deve aparecer com base no texto e categoria ativos
 function produtoVisivel(produto) {
     const texto = getTextoBusca();
 
@@ -87,15 +84,12 @@ function produtoVisivel(produto) {
     return bateTexto && bateCategoria;
 }
 
-// atualiza os cards na tela de acordo com os filtros
 function atualizarProdutos() {
-    // pega todos os cards pelo link que aponta para sobreproduto.html
     const cards = document.querySelectorAll('a[href^="sobreproduto.html"]');
 
     let algumVisivel = false;
 
     cards.forEach(function (link) {
-        // o id do produto fica no parâmetro ?id= da URL do link
         const url = new URL(link.href);
         const id = parseInt(url.searchParams.get("id"));
 
@@ -103,7 +97,6 @@ function atualizarProdutos() {
 
         if (!produto) return;
 
-        // o container visível no grid é o col-md-4 pai do link
         const coluna = link.closest(".col-md-4");
 
         if (produtoVisivel(produto)) {
@@ -114,7 +107,6 @@ function atualizarProdutos() {
         }
     });
 
-    // mostra ou esconde a mensagem de "nenhum resultado"
     let aviso = document.getElementById("aviso-sem-resultado");
 
     if (!algumVisivel) {
@@ -131,7 +123,6 @@ function atualizarProdutos() {
     }
 }
 
-// conecta os botões de categoria ao filtro
 function iniciarBotoesCategorias() {
     const botoes = document.querySelectorAll(".btn-outline-dark");
 
@@ -139,7 +130,6 @@ function iniciarBotoesCategorias() {
         btn.addEventListener("click", function () {
             const categoria = btn.textContent.trim().toLowerCase();
 
-            // clicar na mesma categoria de novo limpa o filtro
             if (categoriaAtiva === categoria) {
                 categoriaAtiva = null;
                 botoes.forEach(function (b) { b.classList.remove("active"); });
@@ -154,12 +144,10 @@ function iniciarBotoesCategorias() {
     });
 }
 
-// conecta o campo de texto ao filtro
 function iniciarBuscaTexto() {
     document.querySelector(".form-control").addEventListener("input", atualizarProdutos);
 }
 
-// arranca tudo quando a página carregar
 document.addEventListener("DOMContentLoaded", function () {
     iniciarBotoesCategorias();
     iniciarBuscaTexto();

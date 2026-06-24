@@ -148,7 +148,7 @@ function adicionarCarrinho() {
 function comprarAgora() {
     // Valida se produto foi encontrado
     if (!produtoAtual) {
-        alert('❌ Erro: Produto não encontrado!');
+        alert(' Erro: Produto não encontrado!');
         return;
     }
 
