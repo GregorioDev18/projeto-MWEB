@@ -9,9 +9,32 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container d-flex justify-content-between align-items-center">
 
-    <header class="bg-dark text-white text-center p-3">
-        <h1>Produtos JKR</h1>
+                <!-- Logo mantida perfeitamente na esquerda -->
+                <a class="navbar-brand fw-bold fs-4" href="index.html">JKR</a>
+
+                <!-- Botão para celular -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu com links centralizados no espaço do meio -->
+                <div class="collapse navbar-collapse justify-content-lg-center" id="menu">
+                    <!-- O 'mx-auto' garante a centralização absoluta em telas de computador -->
+                    <ul class="navbar-nav mx-auto gap-4 fw-medium text-center mt-3 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="precos.html">Preços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
     </header>
 
     <main class="container py-5">
