@@ -35,6 +35,15 @@ footer {
   background-color: #69503c !important;/
 }
 
+/* ===== Header ===== */
+.logo {
+  height: 30px;
+}
+
+.logo-hero {
+  height: 60px;
+}
+
 /* ===== PÁGINA DE DETALHES DO PRODUTO ===== */
 
 .imagem-principal {

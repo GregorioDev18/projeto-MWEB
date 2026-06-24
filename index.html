@@ -1,113 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JKR Store</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>JKR Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-marrom py-3">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo mantida perfeitamente na esquerda -->
+          <a class="navbar-brand fw-bold fs-4" href="index.html"
+            ><img class="logo" src="./logo/jkr-logo.png" alt="logo"
+          /></a>
 
-<body>
+          <!-- Botão para celular -->
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-marrom py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-
-        <!-- Logo mantida perfeitamente na esquerda -->
-        <a class="navbar-brand fw-bold fs-4" href="index.html">JKR</a>
-
-        <!-- Botão para celular -->
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menu com links centralizados no espaço do meio -->
-        <div class="collapse navbar-collapse justify-content-lg-center" id="menu">
-          <!-- O 'mx-auto' garante a centralização absoluta em telas de computador -->
-          <ul class="navbar-nav mx-auto gap-4 fw-medium text-center mt-3 mt-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="precos.html">Preços</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-          </ul>
+          <!-- Menu com links centralizados no espaço do meio -->
+          <div
+            class="collapse navbar-collapse justify-content-lg-center"
+            id="menu"
+          >
+            <!-- O 'mx-auto' garante a centralização absoluta em telas de computador -->
+            <ul
+              class="navbar-nav mx-auto gap-4 fw-medium text-center mt-3 mt-lg-0"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precos.html">Preços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-brand fw-bold fs-4">
+            <a class="nav-link" href="carrinho.html"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
         </div>
-        <div class="navbar-brand fw-bold fs-4">
-          <a class="nav-link" href="carrinho.html"><i class="bi bi-cart"></i></a>
-        </div>   
-     
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero text-white text-center">
+      <video autoplay muted loop class="video-bg">
+        <source src="videos/hero.mp4" />
+      </video>
+
+      <div class="overlay"></div>
+
+      <div class="container position-relative">
+        <img class="logo-hero" src="./logo/jkr-logo.png" alt="logo" />
+        <h1 class="display-3 fw-bold">Shirts</h1>
+        <p class="lead">Onde o estilo encontra o movimento.</p>
+        <a href="produtos.html" class="btn btn-light btn-lg">Ver Coleção</a>
       </div>
-    </nav>
-  </header>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero text-white text-center">
+    <!-- CONTEÚDO -->
+    <main class="container py-5 text-center">
+      <h2>Sobre a JKR</h2>
+      <p class="text-muted">
+        Criada por estudantes, inspirada pela autenticidade.
+      </p>
+      <p class="text-muted">
+        A JKR une conforto, qualidade e estilo streetwear para acompanhar cada
+        passo da sua jornada.
+      </p>
 
-    <video autoplay muted loop class="video-bg">
-      <source src="videos/hero.mp4">
-    </video>
+      <h2 class="mt-5">Destaques</h2>
 
-    <div class="overlay"></div>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <a href="streetwear.html" class="text-decoration-none text-dark">
+            <div class="card h-100">
+              <div class="card-body">Streetwear</div>
+            </div>
+          </a>
+        </div>
 
-    <div class="container position-relative">
-      <h1 class="display-3 fw-bold">JKR Shirts</h1>
-      <p class="lead">Onde o estilo encontra o movimento.</p>
-      <a href="produtos.html" class="btn btn-light btn-lg">Ver Coleção</a>
-    </div>
+        <div class="col-md-4">
+          <a href="ediçãolimitada.html" class="text-decoration-none text-dark">
+            <div class="card h-100">
+              <div class="card-body">Edição Limitada</div>
+            </div>
+          </a>
+        </div>
 
-  </section>
-
-  <!-- CONTEÚDO -->
-  <main class="container py-5 text-center">
-
-    <h2>Sobre a JKR</h2>
-    <p class="text-muted"> Criada por estudantes, inspirada pela autenticidade.</p>
-    <p class="text-muted"> A JKR une conforto, qualidade e estilo streetwear para acompanhar cada passo da sua jornada.</p>
-
-
-    <h2 class="mt-5">Destaques</h2>
-
-    <div class="row g-4 mt-3">
-
-      <div class="col-md-4">
-        <a href="streetwear.html" class="text-decoration-none text-dark">
-          <div class="card h-100">
-            <div class="card-body">Streetwear</div>
-          </div>
-        </a>
+        <div class="col-md-4">
+          <a href="essenciais.html" class="text-decoration-none text-dark">
+            <div class="card h-100">
+              <div class="card-body">Essenciais</div>
+            </div>
+          </a>
+        </div>
       </div>
+    </main>
 
-      <div class="col-md-4">
-        <a href="ediçãolimitada.html" class="text-decoration-none text-dark">
-          <div class="card h-100">
-            <div class="card-body">Edição Limitada</div>
-          </div>
-        </a>
-      </div>
+    <footer class="bg-marrom text-white text-center py-3">© 2026 JKR</footer>
 
-      <div class="col-md-4">
-        <a href="essenciais.html" class="text-decoration-none text-dark">
-          <div class="card h-100">
-            <div class="card-body">Essenciais</div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-  </main>
-
-  <footer class="bg-marrom text-white text-center py-3">
-    © 2026 JKR
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

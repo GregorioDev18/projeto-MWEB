@@ -1,190 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sobre</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <title>Sobre</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* os cards precisam de position relative para a borda animada funcionar */
+      .card-secao,
+      .valor-item {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: default;
+      }
 
+      /* sobe levemente e ganha sombra ao passar o mouse */
+      .card-secao:hover,
+      .valor-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(105, 80, 60, 0.15);
+      }
 
-  <style>
-    /* os cards precisam de position relative para a borda animada funcionar */
-    .card-secao,
-    .valor-item {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-    }
+      /* a borda esquerda dos cards de seção expande de cor ao hover */
+      .card-secao {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-left-color 0.3s ease;
+      }
 
-    /* sobe levemente e ganha sombra ao passar o mouse */
-    .card-secao:hover,
-    .valor-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(105, 80, 60, 0.15);
-    }
+      .card-secao:hover {
+        border-left-color: #4a3728;
+      }
 
-    /* a borda esquerda dos cards de seção expande de cor ao hover */
-    .card-secao {
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
-    }
+      /* o ícone dos valores gira suavemente */
+      .valor-item .valor-icone {
+        transition:
+          transform 0.4s ease,
+          background-color 0.3s ease;
+      }
 
-    .card-secao:hover {
-      border-left-color: #4a3728;
-    }
+      .valor-item:hover .valor-icone {
+        transform: rotate(5deg) scale(1.1);
+        background-color: #4a3728;
+      }
+    </style>
+  </head>
 
-    /* o ícone dos valores gira suavemente */
-    .valor-item .valor-icone {
-      transition: transform 0.4s ease, background-color 0.3s ease;
-    }
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-marrom py-3">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo mantida perfeitamente na esquerda -->
+          <a class="navbar-brand fw-bold fs-4" href="index.html"
+            ><img class="logo" src="./logo/jkr-logo.png" alt="logo"
+          /></a>
 
-    .valor-item:hover .valor-icone {
-      transform: rotate(5deg) scale(1.1);
-      background-color: #4a3728;
-    }
-  </style>
-</head>
+          <!-- Botão para celular -->
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-<body class="d-flex flex-column min-vh-100">
-
-  <header>
-    <!-- navbar com os links de navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-marrom py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">JKR</a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-lg-center" id="menu">
-          <ul class="navbar-nav mx-auto gap-4 fw-medium text-center mt-3 mt-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="precos.html">Preços</a></li>
-            <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-
-        <div class="navbar-brand fw-bold fs-4">
-          <a class="nav-link" href="carrinho.html"><i class="bi bi-cart"></i></a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- faixa de apresentação logo abaixo da navbar, dentro do header -->
-    <div class="sobre-banner">
-      <div class="container">
-        <h1>Sobre a JKR</h1>
-        <p>Conheça a história, os valores e a visão por trás da marca.</p>
-      </div>
-    </div>
-  </header>
-
-  <main class="container py-5 flex-grow-1">
-
-    <!-- história, missão e visão em 3 colunas -->
-    <div class="row g-4 mb-5">
-      <div class="col-md-4">
-        <div class="card-secao">
-          <h2>História</h2>
-          <p>A JKR Shirts nasceu da união de três estudantes de tecnologia (João, Kevin e Rebeca) que compartilhavam a
-            mesma ideia: criar roupas confortáveis, modernas e versáteis para acompanhar a rotina dos jovens adultos.
-            Inspirada pelo ambiente universitário e pelo estilo streetwear, a marca surgiu para oferecer peças que
-            combinam personalidade, praticidade e estilo para qualquer ocasião.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card-secao">
-          <h2>Missão</h2>
-          <p>Oferecer roupas confortáveis, estilosas e acessíveis, permitindo que jovens expressem sua personalidade com
-            confiança em todos os momentos do dia.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card-secao">
-          <h2>Visão</h2>
-          <p>Tornar-se uma referência nacional em moda casual e streetwear, reconhecida pela qualidade, autenticidade e
-            conexão com o universo jovem.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- valores -->
-    <h2 class="valores-titulo">Valores</h2>
-    <div class="row g-3">
-
-      <div class="col-md-6">
-        <div class="valor-item">
-          <div class="valor-icone">
-            <i class="bi bi-person-check"></i>
+          <!-- Menu com links centralizados no espaço do meio -->
+          <div
+            class="collapse navbar-collapse justify-content-lg-center"
+            id="menu"
+          >
+            <!-- O 'mx-auto' garante a centralização absoluta em telas de computador -->
+            <ul
+              class="navbar-nav mx-auto gap-4 fw-medium text-center mt-3 mt-lg-0"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precos.html">Preços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
           </div>
-          <div class="valor-texto">
-            <strong>Autenticidade</strong>
-            <span>Valorizamos a individualidade e a expressão pessoal através da moda.</span>
+          <div class="navbar-brand fw-bold fs-4">
+            <a class="nav-link" href="carrinho.html"
+              ><i class="bi bi-cart"></i
+            ></a>
           </div>
         </div>
-      </div>
+      </nav>
+    </header>
 
-      <div class="col-md-6">
-        <div class="valor-item">
-          <div class="valor-icone">
-            <i class="bi bi-award"></i>
-          </div>
-          <div class="valor-texto">
-            <strong>Qualidade</strong>
-            <span>Desenvolvemos produtos confortáveis, duráveis e com excelente acabamento.</span>
+    <main class="container py-5 flex-grow-1">
+      <!-- história, missão e visão em 3 colunas -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card-secao">
+            <h2>História</h2>
+            <p>
+              A JKR Shirts nasceu da união de três estudantes de tecnologia
+              (João, Kevin e Rebeca) que compartilhavam a mesma ideia: criar
+              roupas confortáveis, modernas e versáteis para acompanhar a rotina
+              dos jovens adultos. Inspirada pelo ambiente universitário e pelo
+              estilo streetwear, a marca surgiu para oferecer peças que combinam
+              personalidade, praticidade e estilo para qualquer ocasião.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-6">
-        <div class="valor-item">
-          <div class="valor-icone">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <div class="valor-texto">
-            <strong>Criatividade</strong>
-            <span>Buscamos inovação constante em nossos designs e coleções.</span>
+        <div class="col-md-4">
+          <div class="card-secao">
+            <h2>Missão</h2>
+            <p>
+              Oferecer roupas confortáveis, estilosas e acessíveis, permitindo
+              que jovens expressem sua personalidade com confiança em todos os
+              momentos do dia.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-6">
-        <div class="valor-item">
-          <div class="valor-icone">
-            <i class="bi bi-tags"></i>
-          </div>
-          <div class="valor-texto">
-            <strong>Acessibilidade</strong>
-            <span>Acreditamos que vestir-se bem deve estar ao alcance de todos.</span>
+        <div class="col-md-4">
+          <div class="card-secao">
+            <h2>Visão</h2>
+            <p>
+              Tornar-se uma referência nacional em moda casual e streetwear,
+              reconhecida pela qualidade, autenticidade e conexão com o universo
+              jovem.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="valor-item">
-          <div class="valor-icone">
-            <i class="bi bi-people"></i>
+      <!-- valores -->
+      <h2 class="valores-titulo">Valores</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="valor-item">
+            <div class="valor-icone">
+              <i class="bi bi-person-check"></i>
+            </div>
+            <div class="valor-texto">
+              <strong>Autenticidade</strong>
+              <span
+                >Valorizamos a individualidade e a expressão pessoal através da
+                moda.</span
+              >
+            </div>
           </div>
-          <div class="valor-texto">
-            <strong>Conexão</strong>
-            <span>Criamos peças pensadas para acompanhar a rotina e os desafios da vida universitária e
-              profissional.</span>
+        </div>
+
+        <div class="col-md-6">
+          <div class="valor-item">
+            <div class="valor-icone">
+              <i class="bi bi-award"></i>
+            </div>
+            <div class="valor-texto">
+              <strong>Qualidade</strong>
+              <span
+                >Desenvolvemos produtos confortáveis, duráveis e com excelente
+                acabamento.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="valor-item">
+            <div class="valor-icone">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <div class="valor-texto">
+              <strong>Criatividade</strong>
+              <span
+                >Buscamos inovação constante em nossos designs e coleções.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="valor-item">
+            <div class="valor-icone">
+              <i class="bi bi-tags"></i>
+            </div>
+            <div class="valor-texto">
+              <strong>Acessibilidade</strong>
+              <span
+                >Acreditamos que vestir-se bem deve estar ao alcance de
+                todos.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="valor-item">
+            <div class="valor-icone">
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="valor-texto">
+              <strong>Conexão</strong>
+              <span
+                >Criamos peças pensadas para acompanhar a rotina e os desafios
+                da vida universitária e profissional.</span
+              >
+            </div>
           </div>
         </div>
       </div>
+    </main>
 
-    </div>
+    <footer class="bg-marrom text-white text-center py-3 mt-auto">
+      © 2026 JKR
+    </footer>
 
-  </main>
-
-  <footer class="bg-marrom text-white text-center py-3 mt-auto">
-    © 2026 JKR
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
