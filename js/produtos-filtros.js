@@ -1,0 +1,166 @@
+// dados de cada produto mapeados aqui também (nome, descrição, categorias)
+// isso evita depender do DOM para saber o que cada card representa
+const dadosProdutos = [
+    { id: 1, 
+        nome: "JKR Essential Tee", 
+        descricao: "Camiseta minimalista em algodão premium", 
+        categorias: ["masculino", "camiseta"] },
+    { id: 2, 
+        nome: "JKR Essential Cropped",
+         descricao: "Cropped minimalista com caimento moderno", 
+         categorias: ["feminino", "cropped"] },
+    { id: 3, 
+        nome: "JKR Essential Long Sleeve", 
+        descricao: "Manga longa confortável para todas as ocasiões", 
+        categorias: ["masculino", "camiseta"] },
+    { id: 4, 
+        nome: "JKR Hexa Cropped", 
+        descricao: "Cropped exclusivo da coleção Brasil", 
+        categorias: ["feminino", "cropped", "copa 2026"] },
+    { id: 5, 
+        nome: "JKR Hexa Cropped", 
+        descricao: "Estilo e torcida em uma só peça", 
+        categorias: ["feminino", "cropped", "copa 2026"] },
+    { id: 6, 
+        nome: "JKR Hexa Cropped", 
+        descricao: "Cropped exclusivo da coleção Brasil com duas estampas", 
+        categorias: ["feminino", "cropped", "copa 2026"] },
+    { id: 7, 
+        nome: "JKR Brasil", 
+        descricao: "Regata inspirada nas cores da bandeira", 
+        categorias: ["feminino", "regata", "copa 2026"] },
+    { id: 8, 
+        nome: "JKR Brasil",
+        descricao: "Estilo esportivo para torcer com personalidade", 
+        categorias: ["masculino", "camiseta", "copa 2026"] },
+    { id: 9, 
+        nome: "JKR Brasil", 
+        descricao: "Estilo esportivo para torcer com personalidade", 
+        categorias: ["masculino", "camiseta", "copa 2026"] },
+    { id: 10, 
+        nome: "JKR Eclipse", 
+        descricao: "Design celestial em versão premium", 
+        categorias: ["feminino", "cropped"] },
+    { id: 11, 
+        nome: "JKR Street Cropped", 
+        descricao: "Cropped com identidade urbana", 
+        categorias: ["feminino", "cropped", "streetwear"] },
+    { id: 12, 
+        nome: "JKR Midnight Tank", 
+        descricao: "Visual noturno elegante e moderno. Regata", 
+        categorias: ["feminino", "regata", "streetwear"] },
+    { id: 13, 
+        nome: "JKR Emblem Tee", 
+        descricao: "Camiseta streetwear com visual sofisticado", 
+        categorias: ["masculino", "camiseta", "streetwear"] },
+    { id: 14, 
+        nome: "JKR Urban Bear", 
+        descricao: "Estampa exclusiva inspirada na vida selvagem", 
+        categorias: ["masculino", "camiseta", "streetwear"] },
+    { id: 15, 
+        nome: "JKR Emblem Tee", 
+        descricao: "Camiseta streetwear com visual sofisticado", 
+        categorias: ["masculino", "camiseta", "streetwear"] },
+];
+
+// guarda qual categoria está ativa no momento (null = todas)
+let categoriaAtiva = null;
+
+// pega o texto de busca atual do campo
+function getTextoBusca() {
+    return document.querySelector(".form-control").value.toLowerCase().trim();
+}
+
+// decide se um produto deve aparecer com base no texto e categoria ativos
+function produtoVisivel(produto) {
+    const texto = getTextoBusca();
+
+    const bateTexto =
+        texto === "" ||
+        produto.nome.toLowerCase().includes(texto) ||
+        produto.descricao.toLowerCase().includes(texto);
+
+    const bateCategoria =
+        categoriaAtiva === null ||
+        produto.categorias.includes(categoriaAtiva);
+
+    return bateTexto && bateCategoria;
+}
+
+// atualiza os cards na tela de acordo com os filtros
+function atualizarProdutos() {
+    // pega todos os cards pelo link que aponta para sobreproduto.html
+    const cards = document.querySelectorAll('a[href^="sobreproduto.html"]');
+
+    let algumVisivel = false;
+
+    cards.forEach(function (link) {
+        // o id do produto fica no parâmetro ?id= da URL do link
+        const url = new URL(link.href);
+        const id = parseInt(url.searchParams.get("id"));
+
+        const produto = dadosProdutos.find(function (p) { return p.id === id; });
+
+        if (!produto) return;
+
+        // o container visível no grid é o col-md-4 pai do link
+        const coluna = link.closest(".col-md-4");
+
+        if (produtoVisivel(produto)) {
+            coluna.style.display = "";
+            algumVisivel = true;
+        } else {
+            coluna.style.display = "none";
+        }
+    });
+
+    // mostra ou esconde a mensagem de "nenhum resultado"
+    let aviso = document.getElementById("aviso-sem-resultado");
+
+    if (!algumVisivel) {
+        if (!aviso) {
+            aviso = document.createElement("p");
+            aviso.id = "aviso-sem-resultado";
+            aviso.className = "text-muted text-center w-100 mt-4";
+            aviso.textContent = "Nenhum produto encontrado.";
+            document.querySelector(".row.g-4").appendChild(aviso);
+        }
+        aviso.style.display = "";
+    } else if (aviso) {
+        aviso.style.display = "none";
+    }
+}
+
+// conecta os botões de categoria ao filtro
+function iniciarBotoesCategorias() {
+    const botoes = document.querySelectorAll(".btn-outline-dark");
+
+    botoes.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const categoria = btn.textContent.trim().toLowerCase();
+
+            // clicar na mesma categoria de novo limpa o filtro
+            if (categoriaAtiva === categoria) {
+                categoriaAtiva = null;
+                botoes.forEach(function (b) { b.classList.remove("active"); });
+            } else {
+                categoriaAtiva = categoria;
+                botoes.forEach(function (b) { b.classList.remove("active"); });
+                btn.classList.add("active");
+            }
+
+            atualizarProdutos();
+        });
+    });
+}
+
+// conecta o campo de texto ao filtro
+function iniciarBuscaTexto() {
+    document.querySelector(".form-control").addEventListener("input", atualizarProdutos);
+}
+
+// arranca tudo quando a página carregar
+document.addEventListener("DOMContentLoaded", function () {
+    iniciarBotoesCategorias();
+    iniciarBuscaTexto();
+});
