@@ -31,6 +31,10 @@ footer {
   margin-top: 40px;
 }
 
+.bg-marrom {
+  background-color: #69503c !important; /
+}
+
 /* ===== PÁGINA DE DETALHES DO PRODUTO ===== */
 
 .imagem-principal {
