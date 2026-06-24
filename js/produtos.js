@@ -174,5 +174,53 @@ const produtos = [
             { nome: "Preto", cor: "#000000", imagem: "images/Streetwear2.png" },
             { nome: "Grafite", cor: "#0b0b0b", imagem: "images/Streetwear3.png" }
         ]
+    },
+    {
+        id: 16,
+        nome: "JJKR Essential Baby Tee",
+        preco: "R$ 79,90",
+        descricao: "Baby look minimalista em algodão premium",
+        imagemPrincipal: "images/babylookPreta.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/babylookPreta.png" },
+            { nome: "Branco", cor: "#ffffff", imagem: "images/babylookBranca.png" }
+        ]
+    },
+    {
+        id: 17,
+        nome: "JKR Urban Sleeveless",
+        preco: "R$ 69,90",
+        descricao: "Regata masculina com visual moderno",
+        imagemPrincipal: "images/regataMasculinaPreta.png",
+        cores: [
+            { nome: "Preto", cor: "#000000", imagem: "images/regataMasculinaPreta.png" },
+            { nome: "Azul", cor: "#1e3a8a", imagem: "images/regataMasculinaAzul.png" },
+            {  nome: "Branco", cor: "#ffffff", imagem: "images/regataMasculinaBranca.png" }
+        ]
+    },
+    {
+        id: 18,
+        nome: "JKR Hexa Baby",
+        preco: "R$ 99,90",
+        descricao: "Baby look inspirada na paixão pelo Brasil",
+        imagemPrincipal: "images/babylookCopa.png",
+        cores: [
+            { nome: "Verde", cor: "#077038", imagem: "images/babylookCopa.png.png" },
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/babylookCopa2.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/babylookCopa3.png" }
+            
+        ]
+    },
+    {
+        id: 19,
+        nome: "JJKR Hexa Tank",
+        preco: "R$ 99,90",
+        descricao: "Regata do Brasil para você acompahar a copa",
+        imagemPrincipal: "images/regataMasculinaCopa2.png",
+        cores: [
+            { nome: "Verde", cor: "#077038", imagem: "images/regataMasculinaCopa2.png" },
+            { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/regataMaculinaCopa.png" },
+            { nome: "Amarelo", cor: "#023990", imagem: "images/regataMaculinaCopa3.png" }
+        ]
     }
 ];
