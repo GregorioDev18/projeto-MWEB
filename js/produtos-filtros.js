@@ -1,86 +1,150 @@
 // dados de cada produto mapeados aqui também (nome, descrição, categorias)
 // isso evita depender do DOM para saber o que cada card representa
 const dadosProdutos = [
-    { id: 1,
+    {
+        id: 1,
         nome: "JKR Essential Tee",
         descricao: "Camiseta minimalista em algodão premium",
-        categorias: ["masculino", "camiseta"] },
-    { id: 2,
+        categorias: ["masculino", "camiseta"]
+    },
+    {
+        id: 2,
         nome: "JKR Essential Cropped",
-         descricao: "Cropped minimalista com caimento moderno",
-         categorias: ["feminino", "cropped"] },
-    { id: 3,
+        descricao: "Cropped minimalista com caimento moderno",
+        categorias: ["feminino", "cropped"]
+    },
+    {
+        id: 3,
         nome: "JKR Essential Long Sleeve",
         descricao: "Manga longa confortável para todas as ocasiões",
-        categorias: ["masculino", "camiseta"] },
-    { id: 4,
+        categorias: ["masculino", "camiseta"]
+    },
+    {
+        id: 4,
         nome: "JKR Hexa Cropped",
         descricao: "Cropped exclusivo da coleção Brasil",
-        categorias: ["feminino", "cropped", "copa 2026"] },
-    { id: 5,
+        categorias: ["feminino", "cropped", "copa 2026"]
+    },
+    {
+        id: 5,
         nome: "JKR Hexa Cropped",
         descricao: "Estilo e torcida em uma só peça",
-        categorias: ["feminino", "cropped", "copa 2026"] },
-    { id: 6,
+        categorias: ["feminino", "cropped", "copa 2026"]
+    },
+    {
+        id: 6,
         nome: "JKR Hexa Cropped",
         descricao: "Cropped exclusivo da coleção Brasil com duas estampas",
-        categorias: ["feminino", "cropped", "copa 2026"] },
-    { id: 7,
+        categorias: ["feminino", "cropped", "copa 2026"]
+    },
+    {
+        id: 7,
         nome: "JKR Brasil",
         descricao: "Regata inspirada nas cores da bandeira",
-        categorias: ["feminino", "regata", "copa 2026"] },
-    { id: 8,
+        categorias: ["feminino", "regata", "copa 2026"]
+    },
+    {
+        id: 8,
         nome: "JKR Brasil",
         descricao: "Estilo esportivo para torcer com personalidade",
-        categorias: ["masculino", "camiseta", "copa 2026"] },
-    { id: 9,
+        categorias: ["masculino", "camiseta", "copa 2026"]
+    },
+    {
+        id: 9,
         nome: "JKR Brasil",
         descricao: "Estilo esportivo para torcer com personalidade",
-        categorias: ["masculino", "camiseta", "copa 2026"] },
-    { id: 10,
+        categorias: ["masculino", "camiseta", "copa 2026"]
+    },
+    {
+        id: 10,
         nome: "JKR Eclipse",
         descricao: "Design celestial em versão premium",
-        categorias: ["feminino", "cropped"] },
-    { id: 11,
+        categorias: ["feminino", "cropped"]
+    },
+    {
+        id: 11,
         nome: "JKR Street Cropped",
         descricao: "Cropped com identidade urbana",
-        categorias: ["feminino", "cropped", "streetwear"] },
-    { id: 12,
+        categorias: ["feminino", "cropped", "streetwear"]
+    },
+    {
+        id: 12,
         nome: "JKR Midnight Tank",
         descricao: "Visual noturno elegante e moderno. Regata",
-        categorias: ["feminino", "regata", "streetwear"] },
-    { id: 13,
+        categorias: ["feminino", "regata", "streetwear"]
+    },
+    {
+        id: 13,
         nome: "JKR Emblem Tee",
         descricao: "Camiseta streetwear com visual sofisticado",
-        categorias: ["masculino", "camiseta", "streetwear"] },
-    { id: 14,
+        categorias: ["masculino", "camiseta", "streetwear"]
+    },
+    {
+        id: 14,
         nome: "JKR Urban Bear",
         descricao: "Estampa exclusiva inspirada na vida selvagem",
-        categorias: ["masculino", "camiseta", "streetwear"] },
-    { id: 15,
+        categorias: ["masculino", "camiseta", "streetwear"]
+    },
+    {
+        id: 15,
         nome: "JKR Emblem Tee",
         descricao: "Camiseta streetwear com visual sofisticado",
-        categorias: ["masculino", "camiseta", "streetwear"] },
-    { id: 16,
+        categorias: ["masculino", "camiseta", "streetwear"]
+    },
+    {
+        id: 16,
         nome: "JKR Essential Baby Tee",
         descricao: "Baby look minimalista em algodão premium",
-        categorias: ["feminino", "babylook"] },
-    { id: 17,
+        categorias: ["feminino", "baby look"]
+    },
+    {
+        id: 17,
         nome: "JKR Urban Sleeveless",
         descricao: "Regata masculina com visual moderno",
-        categorias: ["masculino", "regata"] },
-    { id: 18,
+        categorias: ["masculino", "regata"]
+    },
+    {
+        id: 18,
         nome: "JKR Hexa Baby",
         descricao: "JBaby look inspirada na paixão pelo Brasil",
-        categorias: ["feminino", "babylook", "copa 2026"] },
-    { id: 19,
+        categorias: ["feminino", "baby look", "copa 2026"]
+    },
+    {
+        id: 19,
         nome: "JKR Hexa Tank",
         descricao: "Regata do Brasil para você acompahar a copa.",
-        categorias: ["masculino", "regata", "copa 2026"] },
-    { id: 20,
+        categorias: ["masculino", "regata", "copa 2026"]
+    },
+    {
+        id: 20,
         nome: "JKR Emblem Tee",
         descricao: "Camiseta streetwear com visual sofisticado.",
-        categorias: ["masculino", "camiseta"] },
+        categorias: ["masculino", "camiseta", "streetwear"]
+    },
+    {
+        id: 21,
+        nome: "JKR Essential Tee",
+        descricao: "Camiseta sofisticada e minimalista",
+        categorias: ["masculino", "camiseta"]
+    },
+    {
+        id: 22,
+        nome: "JKR Essential Baby",
+        descricao: "Baby Look sofisticada e minimalista",
+        categorias: ["feminino", "baby look", "streetwear"]
+    },
+    {
+        id: 23,
+        nome: "JKR Essential Baby",
+        descricao: "Baby Look sofisticada e minimalista",
+        categorias: ["feminino", "baby look", "streetwear"]
+    },
+    {
+        id: 24,
+        nome: "JKR Essential RGB",
+        descricao: "Seu estilo na melhor marca",
+        categorias: ["masculino", "camiseta"]
+    },
 ];
 
 let categoriaAtiva = null;
