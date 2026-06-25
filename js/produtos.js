@@ -37,7 +37,7 @@ const produtos = [
     },
     {
         id: 4,
-        nome: "JKR Hexa Cropped",
+        nome: "JKR Brasil Cropped",
         preco: "R$ 99,90",
         descricao: "Cropped exclusivo da coleção Brasil com estilo único e personalidade.",
         imagemPrincipal: "images/croppedAmareloBR.png",
@@ -49,7 +49,7 @@ const produtos = [
     },
     {
         id: 5,
-        nome: "JKR Hexa Cropped",
+        nome: "JKR Brasil Cropped",
         preco: "R$ 99,90",
         descricao: "Estilo e torcida em uma só peça. Celebre o Brasil com atitude.",
         imagemPrincipal: "images/croppedAmareloBR2.png",
@@ -86,7 +86,7 @@ const produtos = [
     },
     {
         id: 8,
-        nome: "JKR Brasil",
+        nome: "JKR Hexa Tee",
         preco: "R$ 109,90",
         descricao: "Estilo esportivo para torcer com personalidade. Camiseta inspirada em ícones do futebol.",
         imagemPrincipal: "images/camisaCopa.png",
@@ -98,7 +98,7 @@ const produtos = [
     },
     {
         id: 9,
-        nome: "JKR Brasil",
+        nome: "JKR Brasil Tee",
         preco: "R$ 99,90",
         descricao: "Estilo esportivo para torcer com personalidade. Versátil e confortável.",
         imagemPrincipal: "images/camisetaVerdeBR.png",
@@ -109,7 +109,7 @@ const produtos = [
     },
     {
         id: 10,
-        nome: "JKR Eclipse",
+        nome: "JKR Eclipse Cropped",
         preco: "R$ 79,90",
         descricao: "Design celestial em versão premium. Perfeito para quem aprecia estética lunar.",
         imagemPrincipal: "images/croppedLuaSolPreta.png",
@@ -177,7 +177,7 @@ const produtos = [
     },
     {
         id: 16,
-        nome: "JJKR Essential Baby Tee",
+        nome: "JKR Essential Baby Tee",
         preco: "R$ 79,90",
         descricao: "Baby look minimalista em algodão premium",
         imagemPrincipal: "images/babylookPreta.png",
@@ -200,7 +200,7 @@ const produtos = [
     },
     {
         id: 18,
-        nome: "JKR Hexa Baby",
+        nome: "JKR Brasil Baby",
         preco: "R$ 99,90",
         descricao: "Baby look inspirada na paixão pelo Brasil",
         imagemPrincipal: "images/babylookCopa.png",
@@ -213,7 +213,7 @@ const produtos = [
     },
     {
         id: 19,
-        nome: "JKR Hexa Tank",
+        nome: "JKR Brasil Tank",
         preco: "R$ 99,90",
         descricao: "Regata do Brasil para você acompahar a copa",
         imagemPrincipal: "images/regataMasculinaCopa2.png",
