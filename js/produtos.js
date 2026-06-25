@@ -205,7 +205,7 @@ const produtos = [
         descricao: "Baby look inspirada na paixão pelo Brasil",
         imagemPrincipal: "images/babylookCopa.png",
         cores: [
-            { nome: "Verde", cor: "#077038", imagem: "images/babylookCopa.png.png" },
+            { nome: "Verde", cor: "#077038", imagem: "images/babylookCopa.png" },
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/babylookCopa2.png" },
             { nome: "Amarelo", cor: "#023990", imagem: "images/babylookCopa3.png" }
 
