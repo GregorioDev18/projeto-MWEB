@@ -659,3 +659,34 @@ iframe {
     }
 
 }
+
+/* Equipe */
+.equipe-descricao {
+  max-width: 1000px;
+}
+
+.foto-equipe {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card img {
+  border: 6px solid #f5f5f5;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card .bi {
+  transition: 0.3s;
+}
+
+.card .bi:hover {
+  color: #8b5e3c;
+}
