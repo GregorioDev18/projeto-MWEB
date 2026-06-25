@@ -104,7 +104,7 @@ const produtos = [
         imagemPrincipal: "images/camisetaVerdeBR.png",
         cores: [
             { nome: "Verde", cor: "#16a34a", imagem: "images/camisetaVerdeBR.png" },
-            { nome: "Azul", cor: "#023990", imagem: "images/camisetaCopaAzulBR.png" }
+            { nome: "Azul", cor: "#023990", imagem: "images/camisetaCopaAzul.png" }
         ]
     },
     {
