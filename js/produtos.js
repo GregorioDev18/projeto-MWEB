@@ -43,7 +43,7 @@ const produtos = [
         imagemPrincipal: "images/croppedAmareloBR.png",
         cores: [
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/croppedAmareloBR.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/croppedAzulBR.png" },
+            { nome: "Azul", cor: "#023990", imagem: "images/croppedAzulBR.png" },
             { nome: "Verde", cor: "#007036", imagem: "images/croppedVerdeBR.jpeg" }
         ]
     },
@@ -55,7 +55,7 @@ const produtos = [
         imagemPrincipal: "images/croppedAmareloBR2.png",
         cores: [
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/croppedAmareloBR2.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/croppedAzulBR2.png" },
+            { nome: "Azul", cor: "#023990", imagem: "images/croppedAzulBR2.png" },
             { nome: "Verde", cor: "#077038", imagem: "images/croppedVerdeBR2.png" }
         ]
     },
@@ -80,7 +80,7 @@ const produtos = [
         imagemPrincipal: "images/regatinhaBR.png",
         cores: [
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/regatinhaBR.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/regatinhaAzulBR.png" },
+            { nome: "Azul", cor: "#023990", imagem: "images/regatinhaAzulBR.png" },
             { nome: "Verde", cor: "#077038", imagem: "images/regatinhaVerdeBR.png" }
         ]
     },
@@ -92,7 +92,7 @@ const produtos = [
         imagemPrincipal: "images/camisaCopa.png",
         cores: [
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/camisaCopa.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/camisaCopa2.png" },
+            { nome: "Azul", cor: "#023990", imagem: "images/camisaCopa2.png" },
             { nome: "Verde", cor: "#077038", imagem: "images/camisaCopa3.png" }
         ]
     },
@@ -139,7 +139,7 @@ const produtos = [
             { nome: "Preto", cor: "#000000", imagem: "images/regatinhaPraianaPreta.png" },
             { nome: "Azul", cor: "#1e3a8a", imagem: "images/regataPraianaAzul.png" },
             { nome: "Lilás", cor: "#BFA6D8", imagem: "images/regataPraianaLilas.png" },
-            { nome: "Marrom", cor: "#895B4C", imagem: "images/regataPraianaMarrom.png" },
+            { nome: "Marrom", cor: "#895B4C", imagem: "images/regataPraianaMarrom.png" }
         ]
     },
     {
@@ -160,8 +160,8 @@ const produtos = [
         descricao: "Estampa exclusiva inspirada na vida selvagem. Para quem tem coragem de se destacar.",
         imagemPrincipal: "images/camisaUrbanUrso.png",
         cores: [
-            { nome: "Azul Petroleo 1", cor: "#1E3253", imagem: "images/camisaUrbanUrso.png" },
-            { nome: "Azul Petroleo 2", cor: "#1E3253", imagem: "images/camisaUrso.png" }
+            { nome: "Azul Petróleo 1", cor: "#1E3253", imagem: "images/camisaUrbanUrso.png" },
+            { nome: "Azul Petróleo 2", cor: "#1E3253", imagem: "images/camisaUrso.png" }
         ]
     },
     {
@@ -207,20 +207,19 @@ const produtos = [
         cores: [
             { nome: "Verde", cor: "#077038", imagem: "images/babylookCopa.png" },
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/babylookCopa2.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/babylookCopa3.png" }
-
+            { nome: "Azul", cor: "#023990", imagem: "images/babylookCopa3.png" }
         ]
     },
     {
         id: 19,
         nome: "JKR Brasil Tank",
         preco: "R$ 99,90",
-        descricao: "Regata do Brasil para você acompahar a copa",
+        descricao: "Regata do Brasil para você acompanhar a copa",
         imagemPrincipal: "images/regataMasculinaCopa2.png",
         cores: [
             { nome: "Verde", cor: "#077038", imagem: "images/regataMasculinaCopa2.png" },
             { nome: "Amarelo", cor: "#F5CC0E", imagem: "images/regataMaculinaCopa.png" },
-            { nome: "Amarelo", cor: "#023990", imagem: "images/regataMaculinaCopa3.png" }
+            { nome: "Azul", cor: "#023990", imagem: "images/regataMaculinaCopa3.png" }
         ]
     },
     {
@@ -230,7 +229,8 @@ const produtos = [
         descricao: "Camiseta streetwear com visual sofisticado.",
         imagemPrincipal: "images/camisetaCinza.png",
         cores: [
-            { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaCinza.png" }]
+            { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaCinza.png" }
+        ]
     },
     {
         id: 21,
@@ -277,6 +277,60 @@ const produtos = [
             { nome: "Preto", cor: "#000000", imagem: "images/camisetaRGBPreta.png" },
             { nome: "Cinza", cor: "#6a6a6a", imagem: "images/camisetaRGBCinza.png" }
         ]
-    },
-    
+    }
 ];
+
+// ===== EXPORTAR PARA USO EM OUTROS ARQUIVOS =====
+// Se estiver usando módulos ES6
+// export default produtos;
+
+// Se estiver usando no navegador (window)
+if (typeof window !== 'undefined') {
+    window.produtos = produtos;
+}
+
+// ===== FUNÇÃO PARA BUSCAR PRODUTO POR ID =====
+function buscarProdutoPorId(id) {
+    return produtos.find(p => p.id === id) || null;
+}
+
+// ===== FUNÇÃO PARA BUSCAR PRODUTOS POR CATEGORIA =====
+function buscarProdutosPorCategoria(categoria) {
+    // Exemplo: filtrar por palavras-chave no nome
+    const termo = categoria.toLowerCase();
+    return produtos.filter(p =>
+        p.nome.toLowerCase().includes(termo) ||
+        p.descricao.toLowerCase().includes(termo)
+    );
+}
+
+// ===== FUNÇÃO PARA OBTER CORES ÚNICAS =====
+function obterCoresUnicas() {
+    const coresSet = new Set();
+    produtos.forEach(produto => {
+        produto.cores.forEach(cor => {
+            coresSet.add(cor.nome);
+        });
+    });
+    return Array.from(coresSet);
+}
+
+// ===== FUNÇÃO PARA OBTER PREÇO MÍNIMO E MÁXIMO =====
+function obterFaixaPreco() {
+    const precos = produtos.map(p => {
+        return parseFloat(p.preco.replace('R$ ', '').replace(',', '.'));
+    });
+    return {
+        min: Math.min(...precos),
+        max: Math.max(...precos)
+    };
+}
+
+// ===== FUNÇÃO PARA FORMATAR PREÇO =====
+function formatarPreco(valor) {
+    return `R$ ${valor.toFixed(2).replace('.', ',')}`;
+}
+
+console.log(`✅ ${produtos.length} produtos carregados com sucesso!`);
+console.log(`📦 Faixa de preço: R$ ${obterFaixaPreco().min.toFixed(2)} - R$ ${obterFaixaPreco().max.toFixed(2)}`);
+console.log(`🎨 ${obterCoresUnicas().length} cores únicas disponíveis`);
